@@ -1,7 +1,6 @@
 export default class ExpCommand {
     constructor(currentValue) {
-        this.currentValue = currentValue
-
+        this.currentValue = currentValue;
     }
 
     execute() {

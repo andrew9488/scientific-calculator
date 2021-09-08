@@ -1,7 +1,6 @@
 export default class SqrtCommand {
     constructor(currentValue) {
-        this.currentValue = currentValue
-
+        this.currentValue = currentValue;
     }
 
     execute() {

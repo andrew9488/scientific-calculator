@@ -1,10 +1,10 @@
 export default class DivideCommand {
     constructor(previousValue, currentValue) {
-        this.currentValue = currentValue
-        this.previousValue = previousValue
+        this.currentValue = currentValue;
+        this.previousValue = previousValue;
     }
 
     execute() {
-        return this.previousValue / this.currentValue
+        return this.previousValue / this.currentValue;
     }
 }

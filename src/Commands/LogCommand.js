@@ -1,6 +1,6 @@
 export default class LogCommand {
     constructor(currentValue) {
-        this.currentValue = currentValue
+        this.currentValue = currentValue;
     }
 
     execute() {

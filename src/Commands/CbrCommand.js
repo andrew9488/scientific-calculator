@@ -1,7 +1,6 @@
 export default class CbrCommand {
     constructor(currentValue) {
-        this.currentValue = currentValue
-
+        this.currentValue = currentValue;
     }
 
     execute() {
