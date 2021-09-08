@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-var": "warn",
+    "semi": "warn",
+    "indent": "warn",
+    "no-multi-spaces": "warn",
+    "space-in-parens": "warn",
+    "no-multiple-empty-lines": "warn",
+    "no-use-before-define": "warn"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ]
+}
