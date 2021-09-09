@@ -69,8 +69,9 @@ export const getResultOfOperationAsStr = () => {
         break;
     }
     case 'm_minus': {
-        if (memoizeStrValue === 0) {
+        if (!memoizeStrValue) {
             memoizeStrValue = -valueNumInMemory;
+            newValueNum = currentValueNum;
         } else {
             memoizeStrValue = memoizeStrValue - valueNumInMemory;
             newValueNum = valueNumInMemory;
@@ -78,7 +79,11 @@ export const getResultOfOperationAsStr = () => {
         break;
     }
     case 'mr': {
-        newValueNum = memoizeStrValue;
+        if (memoizeStrValue) {
+            newValueNum = memoizeStrValue;
+        } else {
+            newValueNum = currentValueNum;
+        }
         break;
     }
     case 'addition': {
@@ -116,6 +121,8 @@ export const getResultOfOperationAsStr = () => {
     case 'user_sqr': {
         if (currentValueNum && valueNumInMemory) {
             newValueNum = new UserSqrCommand(valueNumInMemory,currentValueNum).execute();
+        } else {
+            newValueNum = currentValueNum;
         }
         break;
     }
@@ -146,6 +153,8 @@ export const getResultOfOperationAsStr = () => {
     case 'user_sqrt': {
         if (currentValueNum && valueNumInMemory) {
             newValueNum = new UserSqrtCommand(valueNumInMemory, currentValueNum).execute();
+        } else {
+            newValueNum = currentValueNum;
         }
         break;
     }
@@ -157,14 +166,13 @@ export const getResultOfOperationAsStr = () => {
         }
         break;
     }
-    case 'lg':
-        {
-            if (valueNumInMemory === 0 || valueNumInMemory < 0) {
-                newValueNum = 'error';
-            } else {
-                newValueNum = new LogCommand(valueNumInMemory).execute();
-            }
+    case 'lg': {
+        if (valueNumInMemory === 0 || valueNumInMemory < 0) {
+            newValueNum = 'error';
+        } else {
+            newValueNum = new LogCommand(valueNumInMemory).execute();
         }
+    }
         break;
     }
 
@@ -180,5 +188,16 @@ export const handleOperatorClick = (operation) => {
         valueStrInMemory = getResultOfOperationAsStr();
         operatorInMemory = operation;
         setStrAsValue(valueStrInMemory);
+    }
+};
+
+export const clearFn=(mc = "")=>{
+    if (mc){
+        valueStrInMemory = null;
+        operatorInMemory = null;
+        memoizeStrValue = null;
+    } else {
+        valueStrInMemory = null;
+        operatorInMemory = null;
     }
 };

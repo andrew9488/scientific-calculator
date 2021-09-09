@@ -3,13 +3,12 @@ import { numberElArray } from './shared/buttons';
 import {
     setStrAsValue,
     valueStrInMemory,
-    operatorInMemory,
     getValueAsNum,
     getValueAsStr,
     handleOperatorClick,
     getResultOfOperationAsStr,
-    memoizeStrValue,
     handleNumberClick,
+    clearFn
 } from './shared/helpers';
 
 // Add Event Listeners to functions
@@ -17,8 +16,7 @@ document.addEventListener('click', (event) => {
     switch (event.target.className) {
     case 'item clean': {
         setStrAsValue('0');
-        valueStrInMemory = null;
-        operatorInMemory = null;
+        clearFn();
         break;
     }
     case 'item reverse': {
@@ -40,8 +38,7 @@ document.addEventListener('click', (event) => {
         const currentValueNum = getValueAsNum();
         const newValueNum = currentValueNum / 100;
         setStrAsValue(newValueNum.toString());
-        valueStrInMemory = null;
-        operatorInMemory = null;
+        clearFn();
         break;
     }
     case 'item addition': {
@@ -64,8 +61,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('factorial');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -73,8 +69,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('sqr');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -82,8 +77,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('cbr');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -95,8 +89,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('exp');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -104,8 +97,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('ten_pow');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -113,8 +105,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('fraction');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -122,8 +113,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('sqrt');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -131,8 +121,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('cbrt');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -144,8 +133,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('ln');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -153,8 +141,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('lg');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
@@ -162,9 +149,7 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('mc');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
-            memoizeStrValue = null;
+            clearFn('mc');
         }
         break;
     }
@@ -172,34 +157,30 @@ document.addEventListener('click', (event) => {
         handleOperatorClick('mr');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
-    case 'm_plus': {
+    case 'item m_plus': {
         handleOperatorClick('m_plus');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
-    case 'm_minus': {
+    case 'item m_minus': {
         handleOperatorClick('m_minus');
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
     case 'item equal': {
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
-            valueStrInMemory = null;
-            operatorInMemory = null;
+            clearFn();
         }
         break;
     }
