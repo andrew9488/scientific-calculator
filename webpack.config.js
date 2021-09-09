@@ -1,12 +1,12 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = !isDev
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
 
 const optimization = () => {
 
@@ -14,13 +14,13 @@ const optimization = () => {
         splitChunks: {
             chunks: 'all'
         }
-    }
+    };
 
     if (isProd) {
-        config.minimizer = [new OptimizeCssAssetPlugin(), new TerserWebpackPlugin()]
+        config.minimizer = [new OptimizeCssAssetPlugin(), new TerserWebpackPlugin()];
     }
-    return config
-}
+    return config;
+};
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -72,4 +72,4 @@ module.exports = {
             }
         ]
     }
-}
+};
