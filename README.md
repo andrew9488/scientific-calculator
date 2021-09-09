@@ -52,6 +52,10 @@ The main folder includes all necessary and main documents for app.
 
 This folder includes math commands for calculator. 
 
-### Tests folder
+### shared folder
+
+This folder includes helpers functions.
+
+### tests folder
 
 This folder includes tests for math commands.
