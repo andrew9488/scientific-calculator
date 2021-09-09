@@ -177,7 +177,7 @@ document.addEventListener('click', (event) => {
         }
         break;
     }
-    case 'item equal': {
+    case 'item equal right__button': {
         if (valueStrInMemory) {
             setStrAsValue(getResultOfOperationAsStr());
             clearFn();
