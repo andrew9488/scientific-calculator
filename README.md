@@ -42,5 +42,16 @@ Launches eslint which finds problematic design patterns or code that does not fo
 
 Launches prettier wich aims to use hard-coded rules for the formatting of programs. It formats the code automatically.
 
+## Structure of App
 
+### src folder
 
+The main folder includes all necessary and main documents for app.
+
+### Commands folder
+
+This folder includes math commands for calculator. 
+
+### Tests folder
+
+This folder includes tests for math commands.
