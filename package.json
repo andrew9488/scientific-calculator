@@ -11,7 +11,8 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "lint": "node_modules/.bin/eslint src/",
     "lint:write": "node_modules/.bin/eslint src/ --fix",
-    "prettier": "prettier --write src/"
+    "prettier": "prettier --write src/",
+    "test": "jest"
   },
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {
