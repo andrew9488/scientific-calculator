@@ -4,6 +4,6 @@ export default class ExpCommand {
     }
 
     execute() {
-        return Math.exp(this.currentValue);
+        return Math.exp(this.currentValue).toFixed(8);
     }
 }

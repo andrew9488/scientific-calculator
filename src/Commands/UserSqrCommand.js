@@ -5,6 +5,6 @@ export default class UserSqrCommand {
     }
 
     execute() {
-        return Math.pow(this.currentValue, this.previousValue);
+        return Math.pow(this.previousValue, this.currentValue);
     }
 }

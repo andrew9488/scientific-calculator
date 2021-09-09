@@ -115,7 +115,7 @@ export const getResultOfOperationAsStr = () => {
     }
     case 'user_sqr': {
         if (currentValueNum && valueNumInMemory) {
-            newValueNum = new UserSqrCommand(currentValueNum, valueNumInMemory).execute();
+            newValueNum = new UserSqrCommand(valueNumInMemory,currentValueNum).execute();
         }
         break;
     }

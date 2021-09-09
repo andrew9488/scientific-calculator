@@ -4,6 +4,6 @@ export default class LnCommand {
     }
 
     execute() {
-        return Math.log(this.currentValue);
+        return Math.log(this.currentValue).toFixed(8);
     }
 }

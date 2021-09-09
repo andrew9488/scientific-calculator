@@ -4,6 +4,6 @@ export default class LogCommand {
     }
 
     execute() {
-        return Math.log10(this.currentValue);
+        return Math.log10(this.currentValue).toFixed(8);
     }
 }
