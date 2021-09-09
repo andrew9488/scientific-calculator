@@ -5,7 +5,7 @@ Here you can see task [exercise](https://docs.google.com/document/d/1j8DnTnRSNoR
 ## Description
 
 This project is a single scientific calculator with standart functionality.
-![calculator](https://user-images.githubusercontent.com/70233346/132640293-7fe0834c-0961-4d99-b3c5-fe7285d77850.png)
+![Новый точечный рисунок](https://user-images.githubusercontent.com/70233346/132751605-3901b441-d962-48f1-a0f1-1c0b848a3bda.png)
 
 ## Available Scripts
 
