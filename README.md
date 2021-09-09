@@ -4,11 +4,11 @@
 
 This project is a single scientific calculator with standart functionality.
 
-## Getting Started
+## Available Scripts
 
-First, run the development server:
+In the project directory, you can run:
 
-```bash
-yarn install
-yarn start
-```
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:42000] to view it in the browser.
