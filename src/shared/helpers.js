@@ -159,23 +159,26 @@ export const getResultOfOperationAsStr = () => {
         break;
     }
     case 'ln': {
-        if (valueNumInMemory === 0 || valueNumInMemory < 0) {
-            newValueNum = 'error';
-        } else {
+        if (valueNumInMemory === 0){
+            newValueNum = 0;
+        }else if(valueNumInMemory < 0){
+            newValueNum = "error";
+        }else {
             newValueNum = new LnCommand(valueNumInMemory).execute();
         }
         break;
     }
     case 'lg': {
-        if (valueNumInMemory === 0 || valueNumInMemory < 0) {
-            newValueNum = 'error';
-        } else {
+        if (valueNumInMemory === 0) {
+            newValueNum = 0;
+        } else if (valueNumInMemory < 0){
+            newValueNum = "error";
+        }else {
             newValueNum = new LogCommand(valueNumInMemory).execute();
         }
     }
         break;
     }
-
     return newValueNum.toString();
 };
 
