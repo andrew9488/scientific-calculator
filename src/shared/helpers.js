@@ -30,6 +30,10 @@ export const getValueAsNum = () => {
 };
 
 export const setStrAsValue = (valueStr) => {
+    if(valueStr === "error"){
+        valueEl.textContent = valueStr;
+        return;
+    }
     if (valueStr[valueStr.length - 1] === '.') {
         valueEl.textContent += '.';
         return;
