@@ -1,9 +1,9 @@
-export default class SqrtCommand {
+export default class PercentCommand {
     constructor(currentValue) {
         this.currentValue = currentValue;
     }
 
     execute() {
-        return Math.sqrt(this.currentValue);
+        return this.currentValue / 100;
     }
 }

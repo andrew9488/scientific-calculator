@@ -1,9 +1,9 @@
-export default class SqrCommand {
+export default class TenDegreeCommand {
     constructor(currentValue) {
         this.currentValue = currentValue;
     }
 
     execute() {
-        return Math.pow(this.currentValue, 2);
+        return Math.pow(10, this.currentValue);
     }
 }
